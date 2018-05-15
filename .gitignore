@@ -9,6 +9,11 @@
 #.project
 .settings
 .springBeans
+bin
+target
+/target
+target/
+/target/
 
 ### IntelliJ IDEA ###
 .idea
