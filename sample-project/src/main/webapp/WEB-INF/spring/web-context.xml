@@ -34,8 +34,9 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
 
-    <!--Config view -->
+    <!--Config views & resources -->
     <bean id="viewResolver" p:prefix="/WEB-INF/views/" p:suffix=".jsp"
         class="org.springframework.web.servlet.view.InternalResourceViewResolver" />
+    <mvc:resources mapping="/assets/**" location="/WEB-INF/assets/" />
 
 </beans>

@@ -7,17 +7,17 @@
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Load configuration setting values from properties file -->
-    <bean id="appConfigProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+<!--     <bean id="appConfigProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
                 <value>classpath:/properties/application.cfg.properties</value>
                 <value>classpath:/properties/database.cfg.properties</value>
             </list>
         </property>
-    </bean>
+    </bean> -->
 
     <!-- Component auto scan -->
-    <context:component-scan base-package="vn.poly.duongnv21.sample.controller" />
+    <context:component-scan base-package="vn.poly.sof302.lesson01.controller" />
 
     <!-- Enables the Spring MVC @Controller programming model -->
     <mvc:annotation-driven>
@@ -34,8 +34,9 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
 
-    <!--Config view -->
+    <!--Config views & resources -->
     <bean id="viewResolver" p:prefix="/WEB-INF/views/" p:suffix=".jsp"
         class="org.springframework.web.servlet.view.InternalResourceViewResolver" />
+    <mvc:resources mapping="/assets/**" location="/WEB-INF/assets/" />
 
 </beans>
